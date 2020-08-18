@@ -5,6 +5,12 @@ echo "Run this "
 
 sudo apt-get update
 
+if ! which curl
+then
+	sudo apt install curl
+fi
+
+
 if which pip 
 then 
 	pip install -U pip
