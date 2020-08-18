@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Give us the tools, and we will finish the job"
-echo "Run this "
+echo "Run Forest, Run!"
 
 sudo apt-get update
 
@@ -10,14 +10,18 @@ then
 	sudo apt install curl
 fi
 
+if ! which python 
+then
+	sudo apt install python
+fi
+
 
 if which pip 
 then 
 	pip install -U pip
 else
-	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-	python get-pip.py
-	rm get-pip.py
+	sudo apt install python-pip
+
 fi
 
 if [[ -d ./Debcrypt/ ]]
