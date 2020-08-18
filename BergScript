@@ -1,13 +1,44 @@
 #!/bin/bash
 
-echo "working"
+echo "Give us the tools, and we will finish the job"
+echo "Run this "
 
-if [[ -d ./Berg-Kit/ ]]
-then
-	cd Berg-Kit
-	git pull
+sudo apt-get update
+
+if which pip 
+then 
+	pip install -U pip
 else
-	git clone https://github.com/Bergcybersec/Berg-Kit
+	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+	python get-pip.py
+	rm get-pip.py
 fi
 
+if [[ -d ./Debcrypt/ ]]
+then
+	cd Debcrypt
+	git pull
+	cd ..
+else
+	git clone https://github.com/BREAKTEAM/Debcrypt.git
+fi
 
+if [[ -d ./hashcat/ ]]
+then
+	sudo apt-get upgrade
+else
+	sudo apt-get install hashcat
+fi
+
+if [[ -d ./impacket/ ]]
+then
+	cd impacket
+	git pull
+	pip install . 
+	cd ..
+else
+	git clone https://github.com/SecureAuthCorp/impacket.git
+	cd impacket
+	pip install .
+	cd ..	
+fi
