@@ -1,4 +1,0 @@
-impacket
-hashcat
-debcrypt
-#### testing

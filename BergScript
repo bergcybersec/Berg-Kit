@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "working"
+
+if [[ -d ./Berg-Kit/ ]]
+then
+	cd Berg-Kit
+	git pull
+else
+	git clone https://github.com/Bergcybersec/Berg-Kit
+fi
+
+
