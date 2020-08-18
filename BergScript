@@ -24,6 +24,8 @@ else
 
 fi
 
+cd ..
+
 if [[ -d ./Debcrypt/ ]]
 then
 	cd Debcrypt
@@ -52,3 +54,5 @@ else
 	pip install .
 	cd ..	
 fi
+
+cd Berg-Kit
