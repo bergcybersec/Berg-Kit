@@ -1,8 +1,9 @@
-# Berg-Kit
-The BergCyberSec essentials toolkit 1.0
+# Berg-Kit 1.0
 
-*The tools you need to gain that competitive edge*
+The BergCyberSec essentials toolkit 1.0
 ---
+*The tools you need to gain that competitive edge*
+
 
 a progresively growing toolkit that will install all of the neceesary tools 
 for you to follow all of our meetings and videos. 
